@@ -17,14 +17,12 @@
 package org.kie.guvnor.testscenario.service;
 
 import org.jboss.errai.bus.server.annotations.Remote;
-import org.kie.guvnor.testscenario.model.Scenario;
-import org.kie.guvnor.testscenario.model.SingleScenarioResult;
+import org.junit.runner.notification.RunListener;
 import org.uberfire.backend.vfs.Path;
 
 @Remote
-public interface TestScenarioEditorService {
+public interface TestService {
+    
+    void run( Path resource, RunListener listener );
 
-    SingleScenarioResult runScenario(String packageName, Scenario scenario);
-
-    Scenario loadScenario(Path path);
 }

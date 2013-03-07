@@ -46,7 +46,7 @@ import org.kie.guvnor.testscenario.model.FixturesMap;
 import org.kie.guvnor.testscenario.model.Scenario;
 import org.kie.guvnor.testscenario.model.VerifyFact;
 import org.kie.guvnor.testscenario.model.VerifyRuleFired;
-import org.kie.guvnor.testscenario.service.TestScenarioEditorService;
+import org.kie.guvnor.testscenario.service.TestService;
 import org.uberfire.backend.vfs.Path;
 import org.uberfire.client.annotations.OnStart;
 import org.uberfire.client.annotations.WorkbenchEditor;
@@ -69,14 +69,14 @@ public class ScenarioEditorPresenter
 
     private HandlerRegistration availableRulesHandlerRegistration;
     private ScenarioWidgetComponentCreator scenarioWidgetComponentCreator;
-    private final Caller<TestScenarioEditorService> service;
+    private final Caller<TestService> service;
     private final DataModelService dataModelService;
     private boolean isReadOnly;
     private final Caller<ProjectService> projectService;
 
 
     @Inject
-    public ScenarioEditorPresenter(Caller<TestScenarioEditorService> service,
+    public ScenarioEditorPresenter(Caller<TestService> service,
                                    DataModelService dataModelService,
                                    Caller<ProjectService> projectService) {
         this.service = service;

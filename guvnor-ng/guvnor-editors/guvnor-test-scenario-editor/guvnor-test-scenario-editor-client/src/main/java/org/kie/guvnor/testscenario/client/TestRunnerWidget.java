@@ -42,7 +42,7 @@ import org.kie.guvnor.errors.client.resources.ImageResources;
 import org.kie.guvnor.testscenario.client.resources.i18n.TestScenarioConstants;
 import org.kie.guvnor.testscenario.client.resources.images.AuditEventsImages;
 import org.kie.guvnor.testscenario.client.resources.images.TestScenarioImages;
-import org.kie.guvnor.testscenario.service.TestScenarioEditorService;
+import org.kie.guvnor.testscenario.service.TestService;
 import org.kie.guvnor.testscenario.model.BuilderResultLine;
 import org.kie.guvnor.testscenario.model.ExecutionTrace;
 import org.kie.guvnor.testscenario.model.Fixture;
@@ -64,7 +64,7 @@ public class TestRunnerWidget extends Composite {
     private SimplePanel   actions   = new SimplePanel();
 
     public TestRunnerWidget(final ScenarioEditorPresenter parent,
-                            final Caller<TestScenarioEditorService> testScenarioEditorService,
+                            final Caller<TestService> testScenarioEditorService,
                             final String packageName) {
 
         final Button run = new Button( TestScenarioConstants.INSTANCE.RunScenario() );
